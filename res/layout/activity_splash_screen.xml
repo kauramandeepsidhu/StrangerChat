@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimary"/>
+    <!--ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/circle"
+        android:id="@+id/ballon1"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/-->
+    <!--RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/ballon1"
+            android:text="share"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/circle"
+            android:gravity="center"/>
+        <TextView
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:id="@+id/ballon2"
+            android:text="chat"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_height="150dp"
+            android:layout_width="150dp"
+            android:id="@+id/ballon3"
+            android:text="hello"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ballon2"
+            android:layout_toEndOf="@+id/ballon2" />
+
+    </RelativeLayout-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/b"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Stranger Chat"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+</LinearLayout>

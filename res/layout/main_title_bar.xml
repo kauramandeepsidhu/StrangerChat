@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android=
+    "http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="40dp"
+    android:orientation="horizontal" android:paddingLeft="5dp"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat Club"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:layout_margin="8dp" />
+    <View android:id="@+id/View01"
+        android:layout_width="1dp"
+        android:layout_height="500dip"
+        android:background="@color/colorPrimary"
+        android:layout_toLeftOf="@+id/chatStopBtn">
+    </View>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:id="@id/chatStopBtn"
+        android:text="Stop"
+        android:textColor="@color/colorPrimary"/>
+</RelativeLayout>

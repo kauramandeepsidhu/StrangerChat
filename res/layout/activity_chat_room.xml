@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:subtitleTextAppearance="@style/Toolbar.SubTitleText"
+        android:background="?attr/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayoutET"
+            android:background="@drawable/enter_text"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/chatSendButton"
+            android:layout_alignParentLeft="true"
+            android:backgroundTint="@color/md_white_1000"
+            >
+            <!--ImageView
+                android:id="@+id/emoji_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/smiley"
+                android:layout_gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                /-->
+            <EditText
+                android:id="@+id/messageEdit"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:autoText="true"
+                android:textColor="@color/md_black_1000"
+                android:hint="Type a message"/>
+
+            <!--github.ankushsachdeva.emojicon.EmojiconEditText
+                android:id="@+id/emojicon_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/emoji_btn"
+                android:layout_toLeftOf="@id/chatSendButton"
+                emojicon:emojiconSize="28sp" />
+            <ListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/emojicon_edit_text"
+                ></ListView-->
+        </LinearLayout>
+
+
+        <!--Button
+            android:id="@+id/chatSendButton"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_button"
+            android:text="Send"/-->
+
+        <ImageButton
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/chatSendButton"
+            android:background="@drawable/fab_oval"
+            android:src="@drawable/ic_send_black_24dp"
+            android:stateListAnimator="@anim/fab_raise"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:tint="#ffffff"/>
+        <!--Button
+            android:id="@+id/chatStopButton"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/border_button"
+            android:text="Stop" /-->
+
+        <ListView
+            android:id="@+id/messagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/linearLayoutET"
+            android:layout_marginTop="10dp"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="alwaysScroll"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:stackFromBottom="true"/>
+
+<!--        <TextView
+            android:id="@+id/meLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:text="MySelf"
+            android:singleLine="false"
+            android:textSize="20dp" /> -->
+
+<!--        <TextView
+            android:id="@+id/friendLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Friend"
+            android:textSize="20dp" /> -->
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

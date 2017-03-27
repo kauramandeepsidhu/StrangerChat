@@ -26,7 +26,7 @@ import java.net.URL;
 import java.util.List;
 
 /**
- * Created by Gagan Sidhu on 1/25/2017.
+ * Created by Amandeep Kaur on 1/25/2017.
  */
 public class MyNotificationManager {
     public static final int ID_BIG_NOTIFICATION = 234;

@@ -5,19 +5,24 @@
 
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Stranger Chat"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="android.support.multidex.MultiDexApplication">
         <activity android:name=".MainActivity">
            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,6 +59,10 @@
                 <!--category android:name="android.intent.category.BROWSABLE"/-->
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChatRoomActivtyNew"></activity>
+        <activity
+            android:name=".ImageUploadActivity"></activity>
         <!--
             Defining Services
         -->

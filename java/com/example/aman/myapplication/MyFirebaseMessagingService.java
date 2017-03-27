@@ -17,7 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by Gagan Sidhu on 1/24/2017.
+ * Created by Amandeep Kaur on 1/24/2017.
  */
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "MyFirebaseMsgService";
@@ -83,6 +83,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             //parsing json data
             String title = json.getString("title");
             String message = json.getString("body");
+            String image = json.getString("image");
             String imageUrl = "";
 
             //creating MyNotificationManager object
@@ -98,6 +99,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 Intent pushNotification = new Intent(Config.PUSH_NOTIFICATION);
                 pushNotification.putExtra("title",title);
                 pushNotification.putExtra("message", message);
+                pushNotification.putExtra("image",image);
                 LocalBroadcastManager.getInstance(this).sendBroadcast(pushNotification);
 
                 // play notification sound
@@ -106,10 +108,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             } else {
                 // app is in background, show the notification in notification tray
                 Intent resultIntent = new Intent(getApplicationContext(),ChatRoomActivity.class);
-                resultIntent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 resultIntent.putExtra("title", title);
                 resultIntent.putExtra("message", message);
-                Log.e(TAG,"title="+title+" , message="+message);
+                resultIntent.putExtra("image",image);
+                Log.e(TAG,"title="+title+" , message="+message+" , image="+image);
 
                 //if there is no image
                 if(imageUrl.equals("null")){

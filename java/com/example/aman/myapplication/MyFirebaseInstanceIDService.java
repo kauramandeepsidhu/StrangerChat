@@ -7,7 +7,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
 /**
- * Created by Gagan Sidhu on 1/24/2017.
+ * Created by Amandeep Kaur on 1/24/2017.
  */
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService{
     private static final String TAG = "MyFirebaseIIDService";

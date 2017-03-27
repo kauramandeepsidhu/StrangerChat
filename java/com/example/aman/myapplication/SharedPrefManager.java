@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Gagan Sidhu on 1/24/2017.
+ * Created by Amandeep Kaur on 1/24/2017.
  */
 public class SharedPrefManager {
     private static final String SHARED_PREF_NAME = "ChatSharedPref";

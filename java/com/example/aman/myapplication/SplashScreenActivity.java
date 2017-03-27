@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Gagan Sidhu on 5/7/2016.
+ * Created by Amandeep Kaur on 5/7/2016.
  */
 public class SplashScreenActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;

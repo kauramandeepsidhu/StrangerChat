@@ -22,6 +22,11 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 
+
+/**
+ * Created by Amandeep Kaur on 1/24/2017.
+ */
+
 public class MainActivity extends AppCompatActivity implements AsyncRequest.newInterface {
 
     AsyncRequest req = null;
@@ -33,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements AsyncRequest.newI
     private String session_id;
     private String device_token;
     private Handler progressBarHandler = new Handler();
+    private String LOG="MainActivity";
 
 
     @Override
@@ -64,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements AsyncRequest.newI
                     //public void run() {
                         // TODO Auto-generated method stub
                         /*connectingUser();*/
+
                 connectFCMUser();
                       //  try
                         //{
@@ -218,7 +225,9 @@ public class MainActivity extends AppCompatActivity implements AsyncRequest.newI
                     }else{
                         bar.dismiss();
                         Intent i = new Intent(MainActivity.this, ChatRoomActivity.class);
-                        i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        //i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         i.putExtra("title",String.valueOf(connected));
                         startActivity(i);
                     }
@@ -247,17 +256,20 @@ public class MainActivity extends AppCompatActivity implements AsyncRequest.newI
     protected void onStop() {
         super.onStop();
         //exitChat();
+        Log.e(LOG,"onStop() called");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         //exitChat();
+        Log.e(LOG,"onDestroy() called");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         checkOnline();
+        Log.e(LOG,"onResume() called");
     }
 }

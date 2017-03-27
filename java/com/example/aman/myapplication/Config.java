@@ -1,13 +1,13 @@
 package com.example.aman.myapplication;
 
 /**
- * Created by Gagan Sidhu on 1/28/2017.
+ * Created by Amandeep Kaur on 1/28/2017.
  */
 public class Config {
     // global topic to receive app wide push notifications
     public static final String TOPIC_GLOBAL = "global";
 
-    // broadcast receiver intent filters
+    // broadcast receiver intent filters...
     public static final String REGISTRATION_COMPLETE = "registrationComplete";
     public static final String PUSH_NOTIFICATION = "pushNotification";
 

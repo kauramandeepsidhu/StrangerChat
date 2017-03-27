@@ -16,24 +16,28 @@
             android:background="@drawable/chatbox"
             android:paddingLeft="10dp"
             android:paddingBottom="10dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="5dp"
             android:paddingStart="10dp">
+            <ImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:visibility="gone"/>
             <TextView
                 android:id="@+id/txtMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/md_white_1000"
                 android:maxWidth="240dp"
-                android:layout_gravity="center"
-                android:hint="hello"/>
+                android:layout_gravity="center" />
             <TextView
                 android:id="@+id/txtInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="30sp"
                 android:layout_marginLeft="6dp"
-                android:layout_gravity="center"
-                android:gravity="bottom"
+                android:layout_gravity="bottom|end"
+                android:gravity="center"
                 android:textSize="12sp"
                 android:textColor="@color/md_white_1000"
                 android:hint="1:12PM, Today"/>

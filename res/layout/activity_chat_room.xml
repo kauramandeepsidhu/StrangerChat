@@ -11,11 +11,30 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/white"
-        app:subtitleTextColor="@android:color/white"
-        app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:subtitleTextAppearance="@style/Toolbar.SubTitleText"
         android:background="?attr/colorPrimary">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person_red" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stranger"
+                android:textAppearance="@style/Toolbar.TitleText"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subtitle"
+                android:text="Offline"
+                android:textAppearance="@style/Toolbar.SubTitleText"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
@@ -24,18 +43,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
-        android:background="#ffffff">
+        android:background="@drawable/chatbox_background3">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/linearLayoutET"
-            android:background="@drawable/enter_text"
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/chatSendButton"
             android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/enter_text"
             android:backgroundTint="@color/md_white_1000"
-            >
+            android:orientation="horizontal">
             <!--ImageView
                 android:id="@+id/emoji_btn"
                 android:layout_width="30dp"
@@ -45,13 +65,26 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 /-->
+
             <EditText
                 android:id="@+id/messageEdit"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:gravity="bottom"
                 android:autoText="true"
                 android:textColor="@color/md_black_1000"
-                android:hint="Type a message"/>
+                android:hint="Type a message">
+
+            </EditText>
+            <ImageView
+                android:id="@+id/ivUploadImage"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:src="@android:drawable/ic_menu_camera"
+                />
+
 
             <!--github.ankushsachdeva.emojicon.EmojiconEditText
                 android:id="@+id/emojicon_edit_text"
@@ -80,9 +113,9 @@
             android:text="Send"/-->
 
         <ImageButton
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="5dp"
             android:id="@+id/chatSendButton"
             android:background="@drawable/fab_oval"
             android:src="@drawable/ic_send_black_24dp"
